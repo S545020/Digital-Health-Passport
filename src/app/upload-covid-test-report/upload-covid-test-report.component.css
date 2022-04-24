@@ -1,0 +1,30 @@
+.user{
+    float: right;
+}
+
+.form-check{
+    margin-left: 30px;
+}
+
+.login-header{
+    margin-top: 110px;
+    margin-left: 240px;
+}
+
+.control-group-coviddetails{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.container{
+    margin-left: 110px;
+    margin-top: 110px;
+}
+
+.login-form{
+    width: 750px;
+}
+
+.report{
+    margin-right: 5px;
+}

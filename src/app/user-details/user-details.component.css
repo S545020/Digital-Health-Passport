@@ -1,0 +1,27 @@
+.control-group-coviddetails{
+    margin-left: 140px;
+    margin-top: 60px;
+}
+
+.covid-details{
+    color:blue;
+    margin-top: 1px;
+    margin-left: 365px;
+}
+
+.login-header{
+    margin-top: 80px;
+    margin-left: 140px;
+}
+
+.forgot-pass{
+    margin-left: 140px;
+}
+
+.user{
+    float: right;
+}
+
+.login-form{
+    width: 730px;
+}

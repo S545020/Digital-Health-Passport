@@ -1,0 +1,27 @@
+.login-header{
+    margin-top: 120px;
+}
+
+.login{
+    color:blue;
+    margin-top: 80px;
+    margin-left: 130px;
+}
+
+.input{
+    margin-top:80px;
+    margin-left: 80px;
+}
+
+.search{
+    margin-left: 145px;
+    margin-top: 100px;
+}
+
+.user{
+    float: right;
+}
+
+.login-form{
+    width: 740px;
+}

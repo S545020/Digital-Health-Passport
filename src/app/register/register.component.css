@@ -1,0 +1,57 @@
+.login-form{
+    width: 900px;
+    margin-top: 5px;
+    height: 680px;
+    margin-left: 295px;
+}
+
+/* .login-header{
+    margin-top: 10px;
+} */
+
+.control-group{
+    margin-top: 95px;
+}
+
+.login{
+    margin-left: 225px;
+    margin-top: 20px;
+}
+
+.control-group-organization{
+    margin-top: 30px;
+    margin-left: 165px;
+}
+
+.control-group-pass{
+    margin-top: 30px;
+    margin-left: 230px;
+}
+
+.control-group-confpass{
+    margin-top: 30px;
+    margin-left: 170px;
+}
+
+.control-group-phonenumber{
+    margin-top: 30px;
+    margin-left: 195px;
+}
+
+.form-horizontal{
+margin-left: 50px;
+}
+
+.forgot-pass{
+    margin-left: 180px;
+}
+
+.check{
+    margin-top:15px;
+    margin-left: 220px;
+}
+
+.control-group-submit{
+    margin-left: 290px;
+    margin-top: 45px;
+}
