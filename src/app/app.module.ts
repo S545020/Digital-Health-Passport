@@ -1,5 +1,5 @@
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,6 +20,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UploadCovidVaccinationReportComponent } from './upload-covid-vaccination-report/upload-covid-vaccination-report.component';
 import { UploadCovidTestReportComponent } from './upload-covid-test-report/upload-covid-test-report.component';
 import { QrcodeReaderComponent } from './qrcode-reader/qrcode-reader.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
 const routerList:Routes=[
@@ -32,6 +33,7 @@ const routerList:Routes=[
   {path:'user-details',component:UserDetailsComponent},
   {path: 'upload-covid-vaccination-report',component:UploadCovidVaccinationReportComponent},
   {path: 'upload-covid-test-report',component: UploadCovidTestReportComponent},
+  {path: 'qrcode-reader',component:QrcodeReaderComponent},
   { path: '', redirectTo: '/Login', pathMatch: 'full' }
 ]
 
@@ -55,8 +57,10 @@ const routerList:Routes=[
     FormsModule,
 ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ZXingScannerModule
   ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],
   bootstrap: [AppComponent]
   

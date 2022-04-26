@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QrcodeReaderComponent implements OnInit {
 
+  scanResult: any='';
+
   constructor() { }
 
-  ngOnInit(): void {
+  title = 'ANGULARQRSCANNER';
+
+  onCodeResult(result:any)
+  {
+this.scanResult=result;
+console.log('scanresult',this.scanResult);
+  }
+  
+
+  ngOnInit() {
   }
 
 }
