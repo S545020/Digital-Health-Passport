@@ -1,0 +1,25 @@
+<body>
+    <div class="login-form">
+        <img class="clinic" src="assets/clinic.jpg" height="90px" width="90px;">
+        <!-- <button style="float: right" (click)="logout()">Logout</button> -->
+        <div class="dropdown">
+            <i class="fa fa-user user" style="font-size:36px" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/user-details">Profile</a></li>
+                <li><a class="dropdown-item" href="/change-password">Change Password</a></li>
+                <li><a class="dropdown-item" (click)="logout()" href="/Login">Logout</a></li>
+              </ul>
+              </div>
+              
+        <h3 class="login-header">Patient ID: {{userdata._id}}</h3><br>
+          <div class="control-group-coviddetails">
+              <p>Name: {{userdata.first_name}} {{userdata.last_name}}</p><br>
+              <p>Date of Birth: 09/09/2005</p><br>
+              <p>Email Address: {{userdata.email}}</p><br>
+              <p>Phone Number: {{userdata.phone_number}}</p>
+          </div><br><br>
+          <!-- <a href="/upload-covid-vaccination-report" class="forgot-pass">Click here to upload Vaccination Details</a><br><br> -->
+          <a (click)="sendData()" class="forgot-pass">Click here to upload COVID Report</a>
+    </div>
+    </body>
+    
