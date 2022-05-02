@@ -20,7 +20,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UploadCovidVaccinationReportComponent } from './upload-covid-vaccination-report/upload-covid-vaccination-report.component';
 import { UploadCovidTestReportComponent } from './upload-covid-test-report/upload-covid-test-report.component';
 import { QrcodeReaderComponent } from './qrcode-reader/qrcode-reader.component';
-// import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 
 const routerList:Routes=[
@@ -58,7 +58,7 @@ const routerList:Routes=[
 ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    // ZXingScannerModule
+    ZXingScannerModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }],

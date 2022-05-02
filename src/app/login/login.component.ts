@@ -35,7 +35,13 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('userid',data.user._id);
       localStorage.setItem('token',data.token);
       console.log('data',data);
-      this.router.navigate(['search-user'])
+      if(data.user.role == "ISSUER"){
+        this.router.navigate(['search-user']);
+      }
+      else{
+        this.router.navigate(['qrcode-reader']);
+      }
+      
     //   if (data.length > 0) {
     //     localStorage.setItem("uname", this.loginForm.value.email)
     //     console.log('data',data);
