@@ -72,6 +72,8 @@ else if(event.target.value == "covidvaccinationreport"){
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
         console.log('response',resp);
+        console.log('transactionid',resp.transaction_id);
+        localStorage.setItem('transactionid',resp.transaction_id);
       })
     }
 
