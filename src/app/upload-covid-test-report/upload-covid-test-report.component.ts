@@ -74,6 +74,7 @@ else if(event.target.value == "covidvaccinationreport"){
         console.log('response',resp);
         console.log('transactionid',resp.transaction_id);
         localStorage.setItem('transactionid',resp.transaction_id);
+        location.reload();
       })
     }
 
