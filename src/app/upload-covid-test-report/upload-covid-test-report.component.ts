@@ -72,6 +72,7 @@ else if(event.target.value == "covidvaccinationreport"){
           this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
         console.log('response',resp);
+        location.reload();
       })
     }
 
