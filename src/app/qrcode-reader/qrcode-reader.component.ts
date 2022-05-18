@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UploadCovidTestReportService } from '../upload-covid-test-report/upload-covid-test-report.service';
 
 @Component({
   selector: 'app-qrcode-reader',
@@ -9,7 +10,9 @@ export class QrcodeReaderComponent implements OnInit {
 
   scanResult: any='';
 
-  constructor() { }
+  covidstatus: any;
+
+  constructor(private uploadservice: UploadCovidTestReportService) { }
 
   title = 'ANGULARQRSCANNER';
 
@@ -21,6 +24,9 @@ console.log('scanresult',this.scanResult);
   
 
   ngOnInit() {
+
+    this.covidstatus = localStorage.getItem('covidstatus');
+    console.log('covid status',this.covidstatus);
   }
 
 }

@@ -21,6 +21,7 @@ import { UploadCovidVaccinationReportComponent } from './upload-covid-vaccinatio
 import { UploadCovidTestReportComponent } from './upload-covid-test-report/upload-covid-test-report.component';
 import { QrcodeReaderComponent } from './qrcode-reader/qrcode-reader.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { UploadCovidTestReportService } from './upload-covid-test-report/upload-covid-test-report.service';
 
 
 const routerList:Routes=[

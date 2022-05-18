@@ -5,6 +5,7 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { SearchUserService } from '../search-user/search-user.service';
 import { UploadCovidVaccinationReportService } from '../upload-covid-vaccination-report/upload-covid-vaccination-report.service';
 import { UserDetailsService } from '../user-details/user-details.service';
+import { UploadCovidTestReportService } from './upload-covid-test-report.service';
 
 @Component({
   selector: 'app-upload-covid-test-report',
@@ -12,6 +13,8 @@ import { UserDetailsService } from '../user-details/user-details.service';
   styleUrls: ['./upload-covid-test-report.component.css']
 })
 export class UploadCovidTestReportComponent implements OnInit {
+
+  viewStatus = false;
 
   userdata: any;
 
@@ -27,18 +30,28 @@ export class UploadCovidTestReportComponent implements OnInit {
   covidReport: any;
 
   constructor(private covidreportservice: UploadCovidVaccinationReportService,private modalService: NgbModal,
-    private userdetails: UserDetailsService,private fb: FormBuilder,private router: Router) { }
+    private userdetails: UserDetailsService,private fb: FormBuilder,private router: Router,public uploadcovidtest: UploadCovidTestReportService) { }
 
 
   selectReport(event: any){
 console.log('event',event.target.value);
 if(event.target.value == "covidtestreport"){
   this.covidReport = "covid-report";
+  this.viewStatus = true;
 }
 else if(event.target.value == "covidvaccinationreport"){
   this.covidReport = "covid-vaccination";
+  this.viewStatus = true;
 }
+else{
+  this.viewStatus = false;
+}
+  }
 
+  selectStatus(event: any){
+    console.log('status',event.target.value);
+    localStorage.setItem('covidstatus',event.target.value)
+    this.uploadcovidtest.updateApprovalMessageStatus(event.target.value);
   }
 
   onFilechange(event: any) {
