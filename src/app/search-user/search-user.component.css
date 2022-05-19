@@ -1,4 +1,4 @@
-.login-header{
+/* .login-header{
     margin-top: 120px;
 }
 
@@ -11,11 +11,13 @@
 .input{
     margin-top:80px;
     margin-left: 80px;
+    width: 45%;
 }
 
 .search{
     margin-left: 145px;
     margin-top: 100px;
+    width: 25%;
 }
 
 .user{
@@ -25,3 +27,70 @@
 .login-form{
     width: 785px;
 }
+
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  } */
+
+  .login-header{
+      margin-left: 510px;
+    margin-top: 50px;
+}
+
+.body{
+    background-color:white;
+}
+
+.dropdown{
+
+}
+
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+       body{
+        background-color:#eee;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+       }
+
+       .height{
+        height: 60vh;
+       }
+       
+
+       .search{
+       position: relative;
+       box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+       }
+
+       .search input{
+        height: 60px;
+        text-indent: 25px;
+        border: 2px solid #d6d4d4;
+       }
+
+
+       .search input:focus{
+        box-shadow: none;
+        border: 2px solid blue;
+       }
+
+       .search .fa-search{
+        position: absolute;
+        top: 20px;
+        left: 16px;
+       }
+
+       .search button{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 50px;
+        width: 110px;
+        background: blue;
+       }
