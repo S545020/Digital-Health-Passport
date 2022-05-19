@@ -1,8 +1,8 @@
 .login-form{
-    width: 900px;
+    width: 550px;
     margin-top: 5px;
-    height: 680px;
-    margin-left: 295px;
+    height: 840px;
+    margin-left: 420px;
 }
 
 /* .login-header{
@@ -10,7 +10,7 @@
 } */
 
 .control-group{
-    margin-top: 95px;
+    margin-top: 80px;
 }
 
 .login{
@@ -18,24 +18,31 @@
     margin-top: 20px;
 }
 
+.control-group{
+    margin-top: 30px;
+    margin-left: -15px;
+
+}
+
 .control-group-organization{
     margin-top: 30px;
-    margin-left: 165px;
+    margin-left: -15px;
+    
 }
 
 .control-group-pass{
     margin-top: 30px;
-    margin-left: 230px;
+    margin-left: -15px;
 }
 
 .control-group-confpass{
     margin-top: 30px;
-    margin-left: 170px;
+    margin-left: -15px;
 }
 
 .control-group-phonenumber{
     margin-top: 30px;
-    margin-left: 195px;
+    margin-left: -15px;
 }
 
 .form-horizontal{
@@ -47,8 +54,10 @@ margin-left: 50px;
 }
 
 .check{
-    margin-top:15px;
-    margin-left: 220px;
+    margin-left: -5px;
+}
+#check1{
+    margin-left: 82px;
 }
 
 .control-group-submit{
@@ -58,4 +67,54 @@ margin-left: 50px;
 
 .clinic{
     float: left;
+}
+#organizationemailid{
+    width: 420px;
+padding: 10px 10px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+#organizationname{
+    width:420px;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+}
+#password{
+    width: 420px;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#confirmpassword
+{
+    width: 420px;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#phonenumber
+{
+    width: 420px;
+    padding: 10px 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#btt{
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 375%;
+    margin-left: -300px;
 }

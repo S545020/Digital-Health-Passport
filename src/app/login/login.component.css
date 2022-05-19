@@ -2,10 +2,44 @@
     margin-left: 80px;
 } */
 
-.forgot-pass{
-    margin-right: 10px;
-}
 
 .login-form{
-    width: 810px;
+    width: 550px;
+}
+
+
+#email
+{
+width: 100%;
+padding: 10px 10px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+margin-top: 5px;
+
+}
+
+#password{
+    margin-top: 5px;
+    width: 100%;
+padding: 10px 10px;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+
+}
+
+#butt{
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 109%;
+    margin-left: -40px;
+}
+.login1
+{
+    margin-top: 30px;
+    margin-left: 160px;
 }
