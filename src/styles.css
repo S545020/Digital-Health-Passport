@@ -2,21 +2,35 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 .control-group{
-    margin-left: 150px;
-    margin-top: 110px;
+    margin-left: 20px;
+    margin-top: 40px;
 }
 
 .login-form{
-    max-width: 1150px;
-    width: 640px;
+    
     height: 650px;
     /* margin: 7em auto; */
     margin-top: 20px;
-    margin-left: 410px;
-  background-color: #FFFFFF;
-  padding: 25px 30px;
+    margin-left: 490px;
+  padding-right: 70px;
+  padding-left: 30px;
+  background-color: white;
   border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+   
+}
+
+.login-form1{
+
+    height: 1100px;
+    width: 550px;
+    /* margin: 7em auto; */
+    margin-top: 20px;
+    margin-left: 490px;
+  padding-right: 70px;
+  padding-left: 30px;
+  background-color: white;
+  border-radius: 5px;
+   
    
 }
 
@@ -26,49 +40,58 @@ body{
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: lightblue;
+  background-color: whitesmoke;
 }
 
 .login-header{
-    margin-left:25px;
+    margin-right:180px;
+    padding-top: 40px;
 }
 
 .login{
     color:blue;
-    margin-top: 50px;
-    margin-left: 200px;
+    margin-top: 70px;
+    margin-left: 210px;
 }
 
 .control-group-pass{ 
-    margin-left: 138px;
-    margin-top: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
+
 .control-group-submit{
-    margin-left: 250px;
-    margin-top: 80px;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 .submit{
-    margin-left: 24px;
+    margin-left: 0px;
 }
 
 .forgot-pass{
     color: red;
+    margin-left: 65%;
    
 }
+.required:after {
+    content:" *";
+    color: red;
+  }
 
 .invalid-feedback{
     margin-top: 10px;
-    margin-left: 110px;
 }
 
 .hyper{
-    margin-right: 10px;
     color:red;
 }
 
 .clinic{
     float: left;
+}
+
+.forgot-pass:hover{
+    text-decoration: underline;
 }
 
 html, body { height: 100%; }
