@@ -18,6 +18,8 @@ export class UploadCovidTestReportComponent implements OnInit {
 
   userdata: any;
 
+  otherVaccination: any;
+
   public formGroup = this.fb.group({
     file: [null, Validators.required]
   });
@@ -28,6 +30,8 @@ export class UploadCovidTestReportComponent implements OnInit {
 
   closeResult: any;
   covidReport: any;
+
+  showInput = false;
 
   constructor(private covidreportservice: UploadCovidVaccinationReportService,private modalService: NgbModal,
     private userdetails: UserDetailsService,private fb: FormBuilder,private router: Router,public uploadcovidtest: UploadCovidTestReportService) { }
@@ -43,19 +47,25 @@ else if(event.target.value == "covidvaccinationreport"){
   this.covidReport = "covid-vaccination";
   this.viewStatus = true;
 }
+else if(event.target.value == "othervaccinationreport"){
+  this.showInput = true;
+  this.covidReport = this.otherVaccination;
+  console.log('covidReport',this.otherVaccination);
+  this.viewStatus = true;
+}
 else{
   this.viewStatus = false;
 }
   }
 
-  selectStatus(event: any){
-    console.log('status',event.target.value);
-    localStorage.setItem('covidstatus',event.target.value)
-    this.uploadcovidtest.updateApprovalMessageStatus(event.target.value);
-  }
+  // selectStatus(event: any){
+  //   console.log('status',event.target.value);
+  //   localStorage.setItem('covidstatus',event.target.value)
+  //   this.uploadcovidtest.updateApprovalMessageStatus(event.target.value);
+  // }
 
   onFilechange(event: any) {
-
+    this.covidReport = this.otherVaccination;
     const file:File = event.target.files[0];
 
         if (file) {
@@ -68,6 +78,8 @@ else{
               "report": this.covidReport, 
               "by": "phizer"
             })
+
+            console.log('data',data);
 
             this.formData.append("file", file);
             this.formData.append("holderDHPId",this.userdata)
@@ -87,7 +99,7 @@ else{
         console.log('response',resp);
         console.log('transactionid',resp.transaction_id);
         localStorage.setItem('transactionid',resp.transaction_id);
-        location.reload();
+        // location.reload();
       })
     }
 

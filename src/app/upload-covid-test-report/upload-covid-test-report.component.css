@@ -7,7 +7,7 @@
 }
 
 .login-header{
-    margin-top: 110px;
+    margin-top: 70px;
     margin-left: 240px;
 }
 
@@ -22,9 +22,15 @@
 }
 
 .login-form{
-    width: 790px;
+    margin-left: 250px;
+    width: 1000px;
+    height: 500px;
 }
 
 .report{
     margin-right: 5px;
+}
+
+.showInput{
+    margin-top: 25px;
 }
