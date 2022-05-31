@@ -1,7 +1,31 @@
+<!-- <div>
 <zxing-scanner (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+<h2 style='textAlign: center; marginTop: 1rem'>Health Report:</h2>
+    <iframe type="application/pdf" width="800" height="700" [src]="urlMap"></iframe> 
+</div> -->
 
-<p>
+<div class="row">
+    <div class="column">
+        <zxing-scanner width="1700" height="800" (scanSuccess)="onCodeResult($event)"></zxing-scanner>
+    </div>
+    <div class="column">
+        <iframe type="application/pdf" width="500" height="500" [src]="urlMap"></iframe>
+    </div>
+  </div>
+
+<!-- <p>
     <small>Scan Result</small>
-    <strong>{{scanResult}}</strong>
-    <li><a href="{{scanResult}}">{{scanResult}}</a></li>
 </p>
+
+<a class="view-btn-attach" href="{{selectedFile}}" target="_blank">{{selectedFile}}</a> -->
+
+
+
+<!-- <div class="top-image" [innerHTML]="yt | safe: 'html'"></div> -->
+
+<!-- <iframe src="{{selectedFile}}" title="W3Schools Free Online Web Tutorials">
+</iframe> -->
+
+<!-- <iframe [src]="urlMap" width="100%" height="450" type="application/pdf" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+
+<!-- <iframe [src]="urlMap" width="300" height="300" type='application/pdf'></iframe> -->

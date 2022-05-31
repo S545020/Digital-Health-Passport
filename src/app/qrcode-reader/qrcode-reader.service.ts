@@ -7,15 +7,15 @@ import { Observable } from 'rxjs';
 })
 export class QrcodeReaderService {
 
-  base_url = "https://dhp-server.herokuapp.com/api/verifier/transaction";
+  base_url = "https://dhp-server.herokuapp.com/api/verifier/mtransaction";
 
   transactionid_url = localStorage.getItem('transactionid');
   userid_url = localStorage.getItem('userid');
 
   constructor(private http: HttpClient) { }
 
-  viewCovidReport(): Observable<any> {
-    return this.http.get(this.base_url + '/' + this.transactionid_url + '/' + this.userid_url)
+  viewCovidReport(id: any): Observable<any> {
+    return this.http.get(this.base_url + '/' + id + '/' + this.userid_url, {responseType: 'json'} )
   }
 
 }

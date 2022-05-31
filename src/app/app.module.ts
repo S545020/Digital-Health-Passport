@@ -22,6 +22,7 @@ import { UploadCovidTestReportComponent } from './upload-covid-test-report/uploa
 import { QrcodeReaderComponent } from './qrcode-reader/qrcode-reader.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { UploadCovidTestReportService } from './upload-covid-test-report/upload-covid-test-report.service';
+import { SafePipe } from './safe.pipe';
 
 
 const routerList:Routes=[
@@ -48,7 +49,8 @@ const routerList:Routes=[
     UserDetailsComponent,
     UploadCovidVaccinationReportComponent,
     UploadCovidTestReportComponent,
-    QrcodeReaderComponent
+    QrcodeReaderComponent,
+    SafePipe
 
   ],
   imports: [

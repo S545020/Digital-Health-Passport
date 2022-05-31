@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { SearchUserService } from '../search-user/search-user.service';
@@ -31,6 +32,8 @@ export class UploadCovidTestReportComponent implements OnInit {
   closeResult: any;
   covidReport: any;
 
+  covidTypeReport: any;
+
   showInput = false;
 
   constructor(private covidreportservice: UploadCovidVaccinationReportService,private modalService: NgbModal,
@@ -40,14 +43,19 @@ export class UploadCovidTestReportComponent implements OnInit {
   selectReport(event: any){
 console.log('event',event.target.value);
 if(event.target.value == "covidtestreport"){
+  this.covidTypeReport = event.target.value;
+  this.showInput = false;
   this.covidReport = "covid-report";
   this.viewStatus = true;
 }
 else if(event.target.value == "covidvaccinationreport"){
+  this.covidTypeReport = event.target.value;
+  this.showInput = false;
   this.covidReport = "covid-vaccination";
   this.viewStatus = true;
 }
 else if(event.target.value == "othervaccinationreport"){
+  this.covidTypeReport = event.target.value;
   this.showInput = true;
   this.covidReport = this.otherVaccination;
   console.log('covidReport',this.otherVaccination);
@@ -65,7 +73,23 @@ else{
   // }
 
   onFilechange(event: any) {
-    this.covidReport = this.otherVaccination;
+    if(this.covidTypeReport == "othervaccinationreport"){
+      console.log("othervaccination",this.covidReport);
+      this.covidReport = this.otherVaccination;
+    }
+
+    // if(this.covidTypeReport = "covidtestreport"){
+    //   console.log("covidtestreport",this.covidTypeReport);
+    //   this.covidReport = "covid-report"
+    // }
+
+    // if(this.covidTypeReport = "covidvaccinationreport"){
+    //   console.log("covidvaccinationreport",this.covidTypeReport);
+    //   this.covidReport = "covid-vaccination";
+    // }
+
+
+    
     const file:File = event.target.files[0];
 
         if (file) {
@@ -99,7 +123,7 @@ else{
         console.log('response',resp);
         console.log('transactionid',resp.transaction_id);
         localStorage.setItem('transactionid',resp.transaction_id);
-        // location.reload();
+        location.reload();
       })
     }
 
