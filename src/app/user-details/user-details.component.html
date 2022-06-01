@@ -1,62 +1,7 @@
 <body>
-    <div class=" container login-form">
-        <div class = "row logo-login">
-            <div class = "col-sm-6">
-                <div>
-                    <img class="clinic" src="assets/image.jpg">
-                </div>
-            </div>
-            <div class = "col-sm-6">
-                <div class="dropdown">
-                    <i class="fa fa-user user" style="font-size:36px" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                    <ul class="dropdown-menu dropdown-menu-center" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="/user-details">Profile</a></li>
-                        <li><a class="dropdown-item" href="/change-password">Change Password</a></li>
-                        <li><a class="dropdown-item" (click)="logout()" href="/Login">Logout</a></li>
-                      </ul>
-                </div>
-            </div>
-           
-           
-        </div>
-        
-        <!-- <button style="float: right" (click)="logout()">Logout</button> -->
-        
-    <div class = "row logo-login">
-        <div class=" col-sm-6">
-            <h3 class="login-header">Patient ID: </h3>
-        </div>
-        <div class=" col-sm-6">
-            <h3>{{userdata.dhp_id}}</h3>
-        </div>
 
-    </div>      
-    <div class="col-md-8">
-        <div class="tab-content profile-tab" id="myTabContent">
-          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-             <div class = "user-data">
-                <div class=" col-sm-4">
-                    <label>Name </label>
-                </div>
-                <div class=" col-sm-2">
-                    <p>: </p>
-                </div>
-                <div class=" col-sm-4">
-                    <p>{{userdata.first_name}} {{userdata.last_name}}</p>
-                </div>
-                
-             </div>
-             
-             <div class = "user-data">
-                <div class=" col-sm-4">
-                    <label>Date of Birth</label>
-                </div>
-                <div class=" col-sm-2">
-                    <p>: </p>
-                </div>
-                <div class=" col-sm-4">
-                    <p>09/09/2005</p>
 
+<<<<<<< Updated upstream
                 </div>
                 
             </div>
@@ -82,16 +27,84 @@
                 </div>
                 <div class=" col-sm-4">
                     <p>{{userdata.phone_number}}</p>
+=======
+
+<div class="container" >
+    <div class="main-body" style="margin-left: 25%; margin-top : 10%;">
+    
+    
+          <div class="row gutters-sm">
+
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <h5 style="text-align: center; padding-bottom: 30px;">Patient ID : {{userdata.dhp_id}} </h5>
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                          {{userdata.first_name}} {{userdata.last_name}} 
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of Birth</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        09/09/2005
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email Id</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                         {{userdata.email}} 
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                          {{userdata.phone_number}} 
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row" style="padding-left: 5%; padding-top: 20px;">
+                    <div class="col-sm-12">
+                      <!-- <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a> -->
+                      <a (click)="sendData()" class="forgot-pass" style="color: blue;">Click here </a> to upload health Report
+                    </div>
+                  </div>
+
+>>>>>>> Stashed changes
 
                 </div>
-                
+              </div>
+
             </div>
+<<<<<<< Updated upstream
               
           </div><br><br>
           <!-- <a href="/upload-covid-vaccination-report" class="forgot-pass">Click here to upload Vaccination Details</a><br><br> -->
           <a class="link" (click)="sendData()" class="forgot-pass">Click here to upload health Report</a>
+=======
+>>>>>>> Stashed changes
           </div>
+
+        </div>
     </div>
-    </div>
+
+
+
+
+
+
+
     </body>
     
