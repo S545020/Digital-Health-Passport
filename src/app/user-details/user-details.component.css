@@ -69,3 +69,6 @@ label{
     font-weight: 600;
     color: #0062cc;
 }
+ .link:hover {
+    cursor: pointer;
+      }

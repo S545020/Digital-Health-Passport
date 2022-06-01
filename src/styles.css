@@ -68,6 +68,7 @@ body{
 .forgot-pass{
     color: red;
     margin-left: 65%;
+    cursor: pointer;
    
 }
 .required:after {
