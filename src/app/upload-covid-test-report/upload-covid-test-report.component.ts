@@ -42,28 +42,6 @@ export class UploadCovidTestReportComponent implements OnInit {
 
   selectReport(event: any){
 console.log('event',event.target.value);
-if(event.target.value == "covidtestreport"){
-  this.covidTypeReport = event.target.value;
-  this.showInput = false;
-  this.covidReport = "covid-report";
-  this.viewStatus = true;
-}
-else if(event.target.value == "covidvaccinationreport"){
-  this.covidTypeReport = event.target.value;
-  this.showInput = false;
-  this.covidReport = "covid-vaccination";
-  this.viewStatus = true;
-}
-else if(event.target.value == "othervaccinationreport"){
-  this.covidTypeReport = event.target.value;
-  this.showInput = true;
-  this.covidReport = this.otherVaccination;
-  console.log('covidReport',this.otherVaccination);
-  this.viewStatus = true;
-}
-else{
-  this.viewStatus = false;
-}
   }
 
   // selectStatus(event: any){
