@@ -66,30 +66,11 @@ else{
 }
   }
 
-  // selectStatus(event: any){
-  //   console.log('status',event.target.value);
-  //   localStorage.setItem('covidstatus',event.target.value)
-  //   this.uploadcovidtest.updateApprovalMessageStatus(event.target.value);
-  // }
-
   onFilechange(event: any) {
     if(this.covidTypeReport == "othervaccinationreport"){
       console.log("othervaccination",this.covidReport);
       this.covidReport = this.otherVaccination;
-    }
-
-    // if(this.covidTypeReport = "covidtestreport"){
-    //   console.log("covidtestreport",this.covidTypeReport);
-    //   this.covidReport = "covid-report"
-    // }
-
-    // if(this.covidTypeReport = "covidvaccinationreport"){
-    //   console.log("covidvaccinationreport",this.covidTypeReport);
-    //   this.covidReport = "covid-vaccination";
-    // }
-
-
-    
+    }    
     const file:File = event.target.files[0];
 
         if (file) {
@@ -113,18 +94,6 @@ else{
   
   upload(privacy: any) {
 
-      console.log('covid_report',this.formData);
-      this.covidreportservice.uploadfile(this.formData).subscribe((resp: any) => {
-        this.modalService.open(privacy, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-          this.closeResult = `Closed with: ${result}`;
-        }, (reason) => {
-          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-        });
-        console.log('response',resp);
-        console.log('transactionid',resp.transaction_id);
-        localStorage.setItem('transactionid',resp.transaction_id);
-        location.reload();
-      })
     }
 
     logout(){
