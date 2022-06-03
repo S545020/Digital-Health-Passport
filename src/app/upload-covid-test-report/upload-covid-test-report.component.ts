@@ -94,6 +94,18 @@ else{
   
   upload(privacy: any) {
 
+      console.log('covid_report',this.formData);
+      this.covidreportservice.uploadfile(this.formData).subscribe((resp: any) => {
+        this.modalService.open(privacy, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+          this.closeResult = `Closed with: ${result}`;
+        }, (reason) => {
+          this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+        });
+        console.log('response',resp);
+        console.log('transactionid',resp.transaction_id);
+        localStorage.setItem('transactionid',resp.transaction_id);
+        location.reload();
+      })
     }
 
     logout(){
